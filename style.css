@@ -1,0 +1,279 @@
+/* ------------------------ */
+/* Custom Properties        */
+/* ------------------------ */
+:root {
+  /* colors */
+  --clr-landing-page-bg: #0073A1;
+  --clr-main-container-bg: white;
+  --clr-header-text: #144472;
+  --clr-regular-text: #647883;
+  --clr-login-box-bg: rgba(149,163,171,0.2);
+  --clr-login-box-border: #95a3ab;
+
+
+  /* font families */
+  --ff-sans-serif: Arial, sans-serif;
+  --ff-serif: 'Playfair Display', serif;
+
+  /* font sizes */
+  --fs-title: clamp(0.8rem, 2vw + 0.3rem, 1.3rem);
+  --fs-regular: clamp(0.8rem, 1.5vw + 0.2rem, 1rem);
+  --fs-footer: clamp(0.5rem, 1vw + 0.2rem, 0.7rem);
+
+}
+
+/* ------------------------ */
+/* Reset                    */
+/* ------------------------ */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Reset Box Sizing ------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset Margins --------- */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Set up the body -------- */
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  font-size: 13px;
+  color: var(--clr-text);
+  box-sizing: border-box;
+  font-family: var(--ff-sans-serif);
+  overflow-y: scroll;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Make forms easier to work with */
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul {
+  list-style: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ------------------------ */
+/* Landing Page             */
+/* ------------------------ */
+.landing-page {
+  background-color: var(--clr-header-text);
+}
+
+.lp-main-container {
+  padding: 0px 40px;
+  max-width: 995px;
+  background: var(--clr-main-container-bg);
+  width: 90%;
+  margin: 50px auto;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+  color: var(--clr-regular-text);
+}
+
+.lp-header {
+  text-transform: uppercase;
+  font-size: var(--fs-title);
+  font-family: var(--ff-serif);
+  color: var(--clr-header-text);
+  padding-block: 25px;
+}
+
+.lp-header > h1 > span {
+  font-weight: 800;
+}
+
+.lp-hero {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+}
+
+.lp-hero > img {
+  width: min(100%, 500px);
+  margin: auto;
+}
+
+.lp-text > p {
+  line-height: 19px;
+  padding-block: 20px;
+}
+
+form {
+  border-block: 1px solid var(--clr-regular-text);
+  padding-block: 12px;
+}
+
+form > h3 {
+  color: var(--clr-header-text);
+  font-weight: 600;
+}
+
+form > a {
+  color: var(--clr-header-text);
+  text-decoration: underline;
+}
+
+.lp-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-block: 15px;
+}
+
+.lp-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.lp-field > input {
+  margin-top: 4px;
+  height: 22px;
+  width: 150px;
+  background: var(--clr-login-box-bg);
+  border: 1px solid var(--clr-login-box-border);
+  line-height: 17px;
+  font-size: 12px;
+  color: var(--clr-header-text);
+}
+
+.lp-field > button {
+  background-color: var(--clr-header-text);
+  color: var(--clr-main-container-bg);
+  font-weight: 600;
+  padding-block: 5px;
+  width: fit-content;
+}
+
+.lp-field > button:hover,
+.lp-field > button:focus {
+  cursor: pointer;
+}
+
+.lp-address {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 12px;
+}
+
+footer {
+  padding-block: 30px;
+}
+
+footer > p {
+  border-top: 1px solid var(--clr-regular-text);
+  line-height: 1.2;
+  padding-block:20px;
+  font-size: var(--fs-footer);
+}
+
+.lp-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.lp-footer > a {
+  color: var(--clr-landing-page-bg);
+  font-size: var(--fs-footer);
+}
+
+.lp-footer > a:hover,
+.lp-footer > a:focus {
+  text-decoration: underline;
+}
+
+
+/* ------------------------ */
+/* Media Queries           */
+/* ------------------------ */
+@media (min-width: 1000px) {
+  .lp-hero {
+    grid-template-columns: repeat(2, calc(50% - 20px));
+    justify-content: space-between;
+  }
+
+  .lp-hero > img {
+    align-self: center;
+    width: 100%;
+  }
+
+  .lp-text > p {
+    padding-top: 0;
+  }
+
+  .lp-footer {
+    flex-direction: row;
+    justify-content:flex-end;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 400px) {
+  .lp-login {
+    gap: 20px;
+    flex-direction: row;
+  }
+}
