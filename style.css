@@ -7,7 +7,7 @@
   --clr-main-container-bg: white;
   --clr-header-text: #144472;
   --clr-regular-text: #647883;
-  --clr-login-box-bg: rgba(149,163,171,0.2);
+  --clr-login-box-bg: rgba(149, 163, 171, 0.2);
   --clr-login-box-border: #95a3ab;
 
 
@@ -96,7 +96,7 @@ ul {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
 
   *,
@@ -137,7 +137,7 @@ ul {
   padding-block: 25px;
 }
 
-.lp-header > h1 > span {
+.lp-header>h1>span {
   font-weight: 800;
 }
 
@@ -147,19 +147,20 @@ ul {
   justify-content: center;
 }
 
-.lp-hero > img {
+.lp-hero>img {
   width: min(100%, 500px);
   margin: auto;
 }
 
-.lp-text > p {
+.lp-text>p {
   line-height: 19px;
   padding-block: 20px;
 }
 
-form {
+/* form {
   border-block: 1px solid var(--clr-regular-text);
   padding-block: 12px;
+  height: 0;
 }
 
 form > h3 {
@@ -185,7 +186,7 @@ form > a {
   flex-direction: column;
 }
 
-.lp-field > input {
+.lp-field>input {
   margin-top: 4px;
   height: 22px;
   width: 150px;
@@ -196,7 +197,7 @@ form > a {
   color: var(--clr-header-text);
 }
 
-.lp-field > button {
+.lp-field>button {
   background-color: var(--clr-header-text);
   color: var(--clr-main-container-bg);
   font-weight: 600;
@@ -204,45 +205,29 @@ form > a {
   width: fit-content;
 }
 
-.lp-field > button:hover,
-.lp-field > button:focus {
+.lp-field>button:hover,
+.lp-field>button:focus {
   cursor: pointer;
 }
+*/
 
 .lp-address {
+  border-top: 1px solid var(--clr-regular-text);
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding-top: 12px;
+  padding-top: 20px;
 }
 
 footer {
   padding-block: 30px;
 }
 
-footer > p {
+footer>p {
   border-top: 1px solid var(--clr-regular-text);
   line-height: 1.2;
-  padding-block:20px;
+  padding-block: 20px;
   font-size: var(--fs-footer);
-}
-
-.lp-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 5px;
-}
-
-.lp-footer > a {
-  color: var(--clr-landing-page-bg);
-  font-size: var(--fs-footer);
-}
-
-.lp-footer > a:hover,
-.lp-footer > a:focus {
-  text-decoration: underline;
 }
 
 
@@ -255,18 +240,18 @@ footer > p {
     justify-content: space-between;
   }
 
-  .lp-hero > img {
+  .lp-hero>img {
     align-self: center;
     width: 100%;
   }
 
-  .lp-text > p {
+  .lp-text>p {
     padding-top: 0;
   }
 
   .lp-footer {
     flex-direction: row;
-    justify-content:flex-end;
+    justify-content: flex-end;
     gap: 20px;
   }
 }
