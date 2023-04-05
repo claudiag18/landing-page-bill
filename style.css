@@ -16,7 +16,7 @@
   --ff-serif: 'Playfair Display', serif;
 
   /* font sizes */
-  --fs-title: clamp(0.8rem, 2vw + 0.3rem, 1.2rem);
+  --fs-title: clamp(0.8rem, 2vw + 0.3rem, 1.3rem);
   --fs-regular: clamp(0.8rem, 1.5vw + 0.2rem, 1rem);
   --fs-footer: clamp(0.5rem, 1vw + 0.2rem, 0.7rem);
 
@@ -130,15 +130,16 @@ ul {
 }
 
 .lp-header {
+  position: relative;
   text-transform: uppercase;
   font-size: var(--fs-title);
   font-family: var(--ff-serif);
   color: var(--clr-header-text);
   padding-block: 25px;
-}
-
-.lp-header>h1>span {
-  font-weight: 800;
+  font-weigh: 600;
+  width: calc(100% + 80px);
+  text-align: center;
+  right: 40px;
 }
 
 .lp-hero {
@@ -218,6 +219,7 @@ form > a {
   gap: 5px;
   padding-top: 20px;
   padding-inline: 10px;
+  margin-bottom: 0;
 }
 
 .lp-address > p {
@@ -231,7 +233,7 @@ form > a {
 }
 
 footer {
-  padding-block: 30px;
+  padding-block: 10px 30px;
 }
 
 footer>p {
@@ -265,11 +267,19 @@ footer>p {
     justify-content: flex-end;
     gap: 20px;
   }
+
+  .lp-header {
+    width: 100%;
+    text-align: left;
+    right: 0;
+  }
 }
 
-@media (min-width: 400px) {
+/* @media (min-width: 400px) {
   .lp-login {
     gap: 20px;
     flex-direction: row;
   }
-}
+
+
+} */
