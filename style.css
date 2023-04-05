@@ -16,7 +16,7 @@
   --ff-serif: 'Playfair Display', serif;
 
   /* font sizes */
-  --fs-title: clamp(0.8rem, 2vw + 0.3rem, 1.3rem);
+  --fs-title: clamp(0.8rem, 2vw + 0.3rem, 1.2rem);
   --fs-regular: clamp(0.8rem, 1.5vw + 0.2rem, 1rem);
   --fs-footer: clamp(0.5rem, 1vw + 0.2rem, 0.7rem);
 
