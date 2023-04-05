@@ -217,6 +217,17 @@ form > a {
   flex-direction: column;
   gap: 5px;
   padding-top: 20px;
+  padding-inline: 10px;
+}
+
+.lp-address > p {
+    text-align: center;
+}
+
+.lp-cities {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
 }
 
 footer {
